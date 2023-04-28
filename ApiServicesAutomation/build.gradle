@@ -51,6 +51,7 @@ dependencies {
     implementation group: 'net.serenity-bdd', name: 'serenity-cucumber5', version: serenityCucumberVersion
     implementation group: 'log4j', name: 'log4j', version: '1.2.17'
     implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
 }
 
 test {
