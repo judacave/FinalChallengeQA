@@ -5,6 +5,7 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.rest.interactions.Delete;
 
 public class DoDelete implements Task {
     private String resource;
@@ -16,13 +17,11 @@ public class DoDelete implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                .to(resource)
-                        .with(RequestSpecification::relaxedHTTPSValidation)
-                        .with(request->request.contentType(ContentType.JSON))
+                Delete.from(resource)
         );
     }
 
-    public static DoGet doGet(){
-        return new DoGet();
+    public static DoDelete doDelete(){
+        return new DoDelete();
     }
 }
