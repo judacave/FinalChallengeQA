@@ -26,7 +26,7 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 
 public class NewRadarStepDefinitions extends ApiSetUp {
 
-    public static Logger LOGGER = Logger.getLogger(NewPhotoStepDefinition.class);
+    public static Logger LOGGER = Logger.getLogger(NewRadarStepDefinitions.class);
     private Response res;
     JSONObject resBody = null;
     JSONParser parser = new JSONParser();
